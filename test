@@ -1,0 +1,12 @@
+function func(){
+const arr = [];
+var products = document.querySelectorAll('[cel_widget_id*="MAIN-SEARCH_RESULTS"]');
+for (i = 0; i < products.length; i++){
+ obj = {};
+    obj.name = products[i].querySelector('.a-size-medium.a-color-base.a-text-normal').innerText;
+obj.bookPrice = products[i].querySelector('.a-price').innerText;
+	arr.push(obj)
+}
+return JSON.stringify(arr)
+}
+func()
